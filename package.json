@@ -7,7 +7,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "NewOrders": "vite build --config src/NewOrders/vite.config.js",
-    "BranchToday": "vite build --config src/BranchToday/Branch/vite.config.js"
+    "BranchToday": "vite build --config src/BranchToday/Branch/vite.config.js",
+    "TodayReports": "vite build --config src/TodayReports/Branch/vite.config.js"
+
   },
   "author": "",
   "license": "ISC",
