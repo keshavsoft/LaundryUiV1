@@ -1,0 +1,6 @@
+{
+    "StartRoute": "binV4",
+    "tableName": "Customers",
+    "GetEndPoint": "Read/AsIs",
+    "url": "/Custom/Cleaning/Masters/V2/Customers/DataOnly"
+}
