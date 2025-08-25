@@ -5,7 +5,7 @@ let StartFunc = async () => {
     let jVarLocalFetchHeaders = FetchHeaders();
     // let jVarLocalMobileNumber = jVarLocalFetchHeaders.split(":")[1];
     let jVarLocalBranchName = localStorage.getItem("BranchName");
-    let jVarLocalFetchUrl = `${ConfigJson.Urls.NewOrderButtonId.PostFetch}/${jVarLocalBranchName}`;
+    let jVarLocalFetchUrl = `${ConfigJson.Urls.NewOrderButtonId.PostFetch}`;
 
     let response = await fetch(jVarLocalFetchUrl,jVarLocalFetchHeaders);
 
