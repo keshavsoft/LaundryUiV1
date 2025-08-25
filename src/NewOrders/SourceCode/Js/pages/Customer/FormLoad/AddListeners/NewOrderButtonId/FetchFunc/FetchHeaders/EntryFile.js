@@ -5,20 +5,27 @@ let StartFunc = () => {
     let jVarLocalMobileNumber = jVarLocalFromDom.split(":")[1];
     let jVarLocalUserName = localStorage.getItem("UserName");
 
-    KeysJson.body.inMobileNumber = jVarLocalMobileNumber;
-    KeysJson.body.UserName = jVarLocalUserName;
-    KeysJson.body = JSON.stringify(KeysJson.body);
+    let LocalBody = {
+        Key: "CustomerData",
+        Value: {
+            UserName: jVarLocalUserName,
+            inMobileNumber: jVarLocalMobileNumber
+        }
+    };
 
-    return KeysJson;
+    return {
+        ...KeysJson,
+        body: JSON.stringify(LocalBody)
+    };
 };
 
 let jFLocalCustomerNameInputId = () => {
-    let jVarLocalCustomerNameInputId = 'CustomerNameInputId'
+    let jVarLocalCustomerNameInputId = 'CustomerNameInputId';
     let jVarLocalHtmlId = document.getElementById(jVarLocalCustomerNameInputId);
 
-    if (jVarLocalHtmlId === null === false) {
+    if (jVarLocalHtmlId !== null) {
         return jVarLocalHtmlId.value.trim();
-    };
+    }
 };
 
 export { StartFunc };
