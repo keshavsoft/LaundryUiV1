@@ -20,6 +20,8 @@ const StartFunc = () => {
     });
 
     let LocalLocalObj = {};
+    console.log(LocalLocalObj.Category);
+    
     LocalLocalObj.Category = jVarLocalCategory;
     LocalLocalObj.ItemName = jVarLocalFromLocalStorageFind.ItemName;
     LocalLocalObj.ItemType = jVarLocalItemType

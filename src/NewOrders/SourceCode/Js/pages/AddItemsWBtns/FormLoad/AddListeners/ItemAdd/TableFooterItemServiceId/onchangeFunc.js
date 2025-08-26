@@ -3,7 +3,6 @@ import { StartFuncServiceFind as StartFuncFromLocalStorage } from "../fromlocalS
 const StartFunc = (event) => {
     let jVarLocalCurrentTarget = event.currentTarget;
     let jVarLocalService = jVarLocalCurrentTarget.value;
-    debugger;
 
     const jVarLocalCategorySelected = jFLocalTableFooterCategoryId();
     const jVarLocalItemType = jFLocalTableFooterItemNameId();

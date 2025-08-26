@@ -5,8 +5,7 @@ let StartFunc = async () => {
     let LocalBranchName = localStorage.getItem("BranchName");
     let jVarLocalOrderNumberId = parseInt(document.getElementById("OrderNumberId").innerHTML);
     let jVarLocalFetchHeaders = StartFuncFetchHeaders();
-    // let jVarLocalFetchUrl = `/Custom/Clients/Washtex/Orders/NewOrder/AddItem/${LocalBranchName}`;
-    let jVarLocalFetchUrl = `/Custom/Cleaning/Branch/Order/NewOrderV2/${LocalBranchName}/${jVarLocalOrderNumberId}/ItemsInOrder`;
+    let jVarLocalFetchUrl = `/V3/BranOrdersKKD/SubTableOnObj/Insert/AsIs/${jVarLocalOrderNumberId}/ItemsInOrder`;
     let response = await fetch(jVarLocalFetchUrl, jVarLocalFetchHeaders);
 
     return await response;
