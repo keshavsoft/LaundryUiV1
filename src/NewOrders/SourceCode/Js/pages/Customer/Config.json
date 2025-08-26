@@ -13,7 +13,7 @@
             "PostFetch1": "/Custom/Cleaning/Branch/Order/NewOrderV1/InSertOrder",
             "PostFetch2": "/Custom/Cleaning/Branch/Order/NewOrderV1",
             "PostFetch3": "/Custom/Cleaning/Branch/Order/NewOrderV2",
-            "PostFetch": "/V2/BranOrdersKKD/AddWithDefault/InsertFromBody",
+            "PostFetch": "/V3/BranOrdersKKD/AddWithDefault/InsertFromBody",
 
             "RedirectUrl": {
                 "500Status": "/Laundry/Branch/NewOrders/HtmlFiles/AddItemsWBtns.html",
