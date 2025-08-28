@@ -7,7 +7,7 @@ let StartFunc = async () => {
 
     let jVarLocalLocalStorageKey = ConfigJson.localStorageKeys.ItemNamesKey;
 
-    let jVarLocalFetchUrl = `/Custom/Cleaning/Masters/V2/ItemNames/DataOnly`;
+    let jVarLocalFetchUrl = `/V1/MastersItems/Read/AsIs`;
 
     let jVarLocalFromFetch = await fetch(jVarLocalFetchUrl);
     let jVarLocalFromFetchJson = await jVarLocalFromFetch.json();

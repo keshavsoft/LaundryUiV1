@@ -12,8 +12,9 @@
         "ItemsTable": {
             "DeleteUrl_Common": "$tableName/SubTable/Delete/SubKey/:Id/:inKey/:SubId",
             "DeleteAddOnUrl": "/Custom/Cleaning/Branch/Order/NewOrder/addOn/$tableName/:Id/:SubId/:AddOnKey",
-            "DeleteItemUrl": "/Custom/Cleaning/Branch/Order/NewOrder/Item/$tableName/:Id/:SubId",
-            "AlterGetUrl": "/Custom/Cleaning/Branch/Order/SubTable/ItemsInOrder/:Id/:SubId/$tableName"
+            "DeleteItemUrl": "/V3/BranOrdersKKD/SubTableOnObj/Delete/WithPk",
+            "AlterGetUrl": "/Custom/Cleaning/Branch/Order/SubTable/ItemsInOrder/:Id/:SubId/$tableName",
+            "AlterGetUrl1": "/V3/BranOrdersKKD/SubTableOnObj/Read/AsIs"
         }
     },
     "ModalIds": {
