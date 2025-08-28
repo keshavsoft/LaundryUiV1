@@ -1,11 +1,16 @@
-
 const StartFunc = (inResponse) => {
-    // console.log("inResponse:", inResponse);
+    console.log("inResponse:", inResponse);
+
     let LocalItemNames = JSON.parse(localStorage.getItem("ItemNames"));
-    let jVarLocalFind = LocalItemNames.find(el => el.ItemName == inResponse.ItemName)
+    // let jVarLocalFind = LocalItemNames.find(el => el.ItemName == inResponse.ItemName)
+    let jVarLocalFind = LocalItemNames?.find(el => el.ItemName === inResponse.ItemName);
+console.log("jVarLocalFind",jVarLocalFind);
 
     jFLocalToInputTableFooterCategoryId({ inValue: inResponse.Category })
-    jFLocalToInputTableFooterItemNameId({ inValue: jVarLocalFind.ItemType })
+
+    // jFLocalToInputTableFooterItemNameId({ inValue: jVarLocalFind.ItemType })
+    jFLocalToInputTableFooterItemNameId({ inValue: jVarLocalFind?.ItemType ?? inResponse.ItemType });
+
     jFLocalToInputTableFooterItemServiceId({ inValue: inResponse.ItemService })
     jFLocalToInputTableFooterRateInputId({ inValue: inResponse.Rate })
     jFLocalToInputTableFooterPcsInputId({ inValue: inResponse.Pcs })
@@ -17,6 +22,7 @@ const StartFunc = (inResponse) => {
     localStorage.setItem("PresentOrderAddOns", JSON.stringify(inResponse.AddOnArray));
 
 };
+
 
 
 let jFLocalToInputTableFooterCategoryId = ({ inValue }) => {
