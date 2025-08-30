@@ -23,7 +23,7 @@
             "title": "Customer Name"
         },
         {
-            "field": "CustomerData.CustomerMobile",
+            "field": "CustomerData.inMobileNumber",
             "title": "Mobile",
             "class": "d-none d-sm-table-cell"
         },
