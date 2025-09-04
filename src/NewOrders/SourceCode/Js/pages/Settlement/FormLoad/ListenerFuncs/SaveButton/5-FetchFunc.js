@@ -1,8 +1,12 @@
 import Configjson from "../../../Config.json" with { type: "json" };
+import CommonConfig from '../../../../CommonConfig.json' with {type: 'json'};
 
 let StartFunc = async ({ inSettlementData }) => {
+
     try {
-        let jVarLocalFetchUrl = `${Configjson.PostUrl}/${inSettlementData.MainRowPK}/${inSettlementData.InsertKey}`;
+        let jVarLocalSubRoute = CommonConfig.routePath;
+
+        let jVarLocalFetchUrl = `/${jVarLocalSubRoute}/${Configjson.PostUrl}/${inSettlementData.MainRowPK}/${inSettlementData.InsertKey}`;
 
         let jVarLocalFetchHeaderObject = {
             method: "POST",

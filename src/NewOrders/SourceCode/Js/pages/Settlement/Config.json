@@ -1,7 +1,7 @@
 {
     "routePath": "binV4",
     "GetUrl": "Custom/Cleaning/Branch/Order/NewOrderV1/RowSettlement",
-    "PostUrl": "/V3/BranOrdersKKD/SubTableOnObj/Insert/AsIs",
+    "PostUrl": "BranOrdersKKD/SubTableOnObj/Insert/AsIs",
     "localStorageKeys": {
         "OrderKey": "PresentOrder",
         "ItemNamesKey": "ItemNames",
