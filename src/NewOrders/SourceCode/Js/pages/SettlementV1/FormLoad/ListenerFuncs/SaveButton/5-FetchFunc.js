@@ -1,10 +1,11 @@
-import Configjson from "../../../Config.json" with {type: "json"};
+import CommonConfig from "../../../../CommonConfig.json" with {type: "json"};
 
 let StartFunc = async ({ inSettlementData }) => {
+    let jVarLocalSubRoute = CommonConfig.routePath;
     let jVarLocalBranchName = localStorage.getItem("BranchName");
     let jVarLocalBodyData = inSettlementData.inDataToUpdate;
 
-    let jVarLocalFetchUrl = `/${Configjson.routePath}/${jVarLocalBranchName}/SubTable/Create/${inSettlementData.MainRowPK}/${inSettlementData.InsertKey}`;
+    let jVarLocalFetchUrl = `/${jVarLocalSubRoute}/${jVarLocalBranchName}/SubTableOnObj/Insert/AsIs/${inSettlementData.MainRowPK}/${inSettlementData.InsertKey}`;
     let jVarLocalFetchHeaderObject = {
         method: "POST",
         headers: {
