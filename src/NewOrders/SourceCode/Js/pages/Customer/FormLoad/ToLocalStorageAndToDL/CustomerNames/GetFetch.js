@@ -4,7 +4,7 @@ let StartFunc = async () => {
     let jVarLocalSubRoute = ConfigJson.routePath;
     let jVarLocalLocalStorageKey = ConfigJson.localStorageKeys.OrderKey;
 
-    let jVarLocalFetchUrl = `/V1/MastersCustomers/Read/AsIs`;
+    let jVarLocalFetchUrl = `/Custom/Cleaning/Masters/V2/Customers/DataOnly`;
 
     let jVarLocalFromFetch = await fetch(jVarLocalFetchUrl);
     let jVarLocalFromFetchJson = await jVarLocalFromFetch.json();

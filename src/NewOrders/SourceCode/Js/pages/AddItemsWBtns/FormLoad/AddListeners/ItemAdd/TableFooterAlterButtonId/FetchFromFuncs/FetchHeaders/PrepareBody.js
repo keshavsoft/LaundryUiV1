@@ -10,7 +10,7 @@ const StartFunc = () => {
     let jVarLocalDeliveryDateTime = jFLocalTableFooterdateInputId();
     const jVarLocalItemService = jFLocalTableFooterItemServiceId();
 
-    localStorage.setItem("DeliveryDateTime", JSON.stringify(jVarLocalDeliveryDateTime));
+    localStorage.setItem("DeliveryDateTime", JSON.stringify(jVarLocalDeliveryDateTime))
     let LocalAddOnData = JSON.parse(localStorage.getItem("PresentOrderAddOns"));
 
     const jVarLocalFromLocalStorageFind = StartFuncFromLocalStorage({
@@ -21,22 +21,18 @@ const StartFunc = () => {
 
     let LocalLocalObj = {};
     LocalLocalObj.Category = jVarLocalCategory;
-
-    // LocalLocalObj.ItemName = jVarLocalFromLocalStorageFind.ItemName;
-    LocalLocalObj.ItemName = jVarLocalFromLocalStorageFind?.ItemName ?? jVarLocalItemType;
-
-    LocalLocalObj.ItemType = jVarLocalItemType;
-    LocalLocalObj.Rate = jVarLocalItemRate;
-    LocalLocalObj.Pcs = jVarLocalPcs;
-    LocalLocalObj.Total = jVarLocalTotal;
-    LocalLocalObj.location = jVarLocallocation;
+    LocalLocalObj.ItemName = jVarLocalFromLocalStorageFind.ItemName;
+    LocalLocalObj.ItemType = jVarLocalItemType
+    LocalLocalObj.Rate = jVarLocalItemRate
+    LocalLocalObj.Pcs = jVarLocalPcs
+    LocalLocalObj.Total = jVarLocalTotal
+    LocalLocalObj.location = jVarLocallocation
     LocalLocalObj.DeliveryDateTime = jVarLocalDeliveryDateTime;
     LocalLocalObj.ItemService = jVarLocalItemService;
     LocalLocalObj.AddOnArray = LocalAddOnData;
 
     return LocalLocalObj;
 };
-
 
 let jFLocalTableFooterItemServiceId = () => {
     let jVarLocalTableFooterItemServiceId = 'TableFooterItemServiceId'

@@ -1,12 +1,10 @@
 import ConfigJson from '../../../Config.json' with {type: 'json'};
-import CommonConfig from '../../../../CommonConfig.json' with {type: 'json'};
 
 let StartFunc = async () => {
-    let jVarLocalSubRoute = CommonConfig.routePath;
     let jVarLocalTableName = localStorage.getItem("BranchName");
     let jVarLocalLocalStorageKey = ConfigJson.localStorageKeys.OrderKey;
 
-    let jVarLocalFetchUrl = `/${jVarLocalSubRoute}/BranOrdersKKD/Read/MaxRow`;
+    let jVarLocalFetchUrl = `/Custom/Cleaning/Branch/Order/NewOrder/MaxRow/${jVarLocalTableName}`;
 
     let jVarLocalFromFetch = await fetch(jVarLocalFetchUrl);
     let jVarLocalFromFetchJson = await jVarLocalFromFetch.json();

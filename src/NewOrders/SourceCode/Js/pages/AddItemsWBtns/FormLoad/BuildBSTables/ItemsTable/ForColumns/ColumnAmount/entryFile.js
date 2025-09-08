@@ -5,36 +5,16 @@ let StartFunc = ({ inFindColumn }) => {
 
 function jFLocalOptsFormater(value, row, index) {
     let JVarLocalFromStrogeAddOnData = localStorage.getItem("PresentOrder");
-
-    if (!JVarLocalFromStrogeAddOnData) {
-        return row.Total;
-    }
-
-    let JvarLocalData;
-    try {
-        JvarLocalData = JSON.parse(JVarLocalFromStrogeAddOnData);
-    } catch (e) {
-        return row.Total;
-    }
-
-    if (!JvarLocalData || !JvarLocalData.AddOnData) {
-        return row.Total;
-    }
-
+    let JvarLocalData = JSON.parse(JVarLocalFromStrogeAddOnData);
     let jVarLocalItemSerial = row.ItemSerial;
-
-    let jVarLocalFilterData = Object.values(JvarLocalData.AddOnData)
-        .filter(e => e.AddOnItemSerial === jVarLocalItemSerial);
+    let jVarLocalFilterData = Object.values(JvarLocalData.AddOnData).filter(e => e.AddOnItemSerial === jVarLocalItemSerial);
 
     if (jVarLocalFilterData.length > 0) {
-        let jVarLocalAddOnPrice = jVarLocalFilterData
-            .map(e => e.AddOnRate)
-            .reduce((a, b) => a + b, 0);
-
-        return (jVarLocalAddOnPrice * row.Pcs) + row.Total;
+        let jVarLocalAddOnPrice = jVarLocalFilterData.map(e => e.AddOnRate).reduce((a, b) => a + b, 0);
+        return (jVarLocalAddOnPrice * row.Pcs) + row.Total
     } else {
         return row.Total;
-    }
+    };
 };
 
 function totalPriceFormatter(data) {
@@ -42,6 +22,7 @@ function totalPriceFormatter(data) {
     return '₹ ' + data.map(function (row) {
         return +row.Total
     }).reduce(function (sum, i) {
+
         return sum + i
     }, 0)
 }

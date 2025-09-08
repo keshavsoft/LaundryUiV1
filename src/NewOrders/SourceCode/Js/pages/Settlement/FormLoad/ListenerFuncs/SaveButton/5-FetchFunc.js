@@ -1,29 +1,24 @@
-import Configjson from "../../../Config.json" with { type: "json" };
-import CommonConfig from '../../../../CommonConfig.json' with {type: 'json'};
+import Configjson from "../../../Config.json" with {type: "json"};
 
 let StartFunc = async ({ inSettlementData }) => {
+    let jVarLocalBranchName = localStorage.getItem("BranchName");
+    let jVarLocalBodyData = inSettlementData.inDataToUpdate;
 
-    try {
-        let jVarLocalSubRoute = CommonConfig.routePath;
+    let jVarLocalFetchUrl = `/${Configjson.PostUrl}/${inSettlementData.MainRowPK}/${jVarLocalBranchName}`;
 
-        let jVarLocalFetchUrl = `/${jVarLocalSubRoute}/${Configjson.PostUrl}/${inSettlementData.MainRowPK}/${inSettlementData.InsertKey}`;
+    let jVarLocalFetchHeaderObject = {
+        method: "POST",
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(jVarLocalBodyData)
+    };
 
-        let jVarLocalFetchHeaderObject = {
-            method: "POST",
-            headers: {
-                "Accept": "application/json",
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(inSettlementData.inDataToUpdate)
-        };
+    let response = await fetch(jVarLocalFetchUrl, jVarLocalFetchHeaderObject);
+    let jVarLocalResponse = await response.json();
 
-        let response = await fetch(jVarLocalFetchUrl, jVarLocalFetchHeaderObject);
-
-        return await response;
-
-    } catch (err) {
-        return { success: false, error: err.message };
-    }
+    return jVarLocalResponse;
 };
 
 export { StartFunc };

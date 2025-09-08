@@ -12,8 +12,7 @@
         "NewOrderButtonId": {
             "PostFetch1": "/Custom/Cleaning/Branch/Order/NewOrderV1/InSertOrder",
             "PostFetch2": "/Custom/Cleaning/Branch/Order/NewOrderV1",
-            "PostFetch3": "/Custom/Cleaning/Branch/Order/NewOrderV2",
-            "PostFetch": "/V3/BranOrdersKKD/AddWithDefault/InsertFromBody",
+            "PostFetch": "/Custom/Cleaning/Branch/Order/NewOrderV2",
 
             "RedirectUrl": {
                 "500Status": "/Laundry/Branch/NewOrders/HtmlFiles/AddItemsWBtns.html",

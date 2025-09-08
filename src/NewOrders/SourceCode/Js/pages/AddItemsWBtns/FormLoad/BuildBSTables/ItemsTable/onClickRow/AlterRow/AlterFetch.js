@@ -7,7 +7,7 @@ const StartFunc = async ({ inRowpk, inItemSerial }) => {
     const jVarLocalSubId = inItemSerial;
 
     let LocalUrl = jVarLocalDeleteUrl.replace("$tableName", jVarLocalBranchName).replace(":Id", inRowpk).replace(":SubId", jVarLocalSubId);
-    // let LocalUrl = `${jVarLocalDeleteUrl}/${inItemSerial}/ItemsInOrder`;
+
     // let LocalFetchObj = {
     //     method: "DELETE",
     //     headers: {

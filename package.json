@@ -1,6 +1,6 @@
 {
   "name": "laundryfrontendforbranch",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "only laundry front end in branch only",
   "main": "index.js",
   "type": "module",

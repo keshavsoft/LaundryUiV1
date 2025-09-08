@@ -3,11 +3,11 @@ import ConfigJson from '../../../../../Config.json' with {type: 'json'};
 const StartFunc = async ({ inRowpk, inItemSerial }) => {
     const jVarLocalDeleteUrl = ConfigJson.ApiUrls.ItemsTable.DeleteItemUrl;
 
-    // let jVarLocalBranchName = localStorage.getItem("BranchName");
+    let jVarLocalBranchName = localStorage.getItem("BranchName");
     const jVarLocalSubId = inItemSerial;
 
-    // let LocalUrl = jVarLocalDeleteUrl.replace("$tableName", jVarLocalBranchName).replace(":Id", inRowpk).replace(":SubId", jVarLocalSubId);
-    let LocalUrl = `${jVarLocalDeleteUrl}/${inRowpk}/ItemsInOrder/${jVarLocalSubId}`;
+    let LocalUrl = jVarLocalDeleteUrl.replace("$tableName", jVarLocalBranchName).replace(":Id", inRowpk).replace(":SubId", jVarLocalSubId);
+
     let LocalFetchObj = {
         method: "DELETE",
         headers: {

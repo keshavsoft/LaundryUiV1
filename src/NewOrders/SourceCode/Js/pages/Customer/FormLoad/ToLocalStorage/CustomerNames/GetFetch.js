@@ -1,8 +1,10 @@
- import CommonConfig from '../../../../CommonConfig.json' with {type: 'json'};
+import ConfigJson from '../../../Config.json' with {type: 'json'};
 
 let StartFunc = async () => {
-    let jVarLocalSubRoute = CommonConfig.routePath;
-    let jVarLocalFetchUrl = `/${jVarLocalSubRoute}/MastersCustomers/Read/AsIs`;
+    let jVarLocalSubRoute = ConfigJson.routePath;
+    let jVarLocalLocalStorageKey = ConfigJson.localStorageKeys.OrderKey;
+
+    let jVarLocalFetchUrl = `/${jVarLocalSubRoute}/MastersCustomers/Show/DataOnly`;
 
     let jVarLocalFromFetch = await fetch(jVarLocalFetchUrl);
     let jVarLocalFromFetchJson = await jVarLocalFromFetch.json();

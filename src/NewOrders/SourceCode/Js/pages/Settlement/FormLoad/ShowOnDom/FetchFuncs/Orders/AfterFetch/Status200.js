@@ -2,6 +2,7 @@ import { StartFunc as StartFuncCommonDetails } from './ShowOnDom/CommonDetails.j
 import { StartFunc as StartFuncShowSettlementDetails } from './ShowOnDom/ShowSettlementDetails.js';
 
 const StartFunc = ({ inData }) => {
+    console.log("inData:",inData);
     
     StartFuncCommonDetails({ inData });
     StartFuncShowSettlementDetails({ inData });

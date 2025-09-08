@@ -8,8 +8,7 @@ let StartFunc = async () => {
     let jVarLocalFetchHeaders = StartFuncFetchHeaders();
     // let jVarLocalFetchUrl = `/Custom/Clients/Washtex/Orders/NewOrder/AddItem/${LocalBranchName}`;
     // let jVarLocalFetchUrl = `/${ConfigJson.routePath}/${LocalBranchName}/SubTable/Create/${jVarLocalOrderNumberId}/ItemsInOrder`;
-    // let jVarLocalFetchUrl = `/Custom/Cleaning/Branch/Order/SubTable/ItemsInOrder/${jVarLocalOrderNumberId}/${jVarLocalSubId}/${LocalBranchName}`;
-    let jVarLocalFetchUrl = `/V3/BranOrdersKKD/SubTableOnObj/Alter/WithPk/${jVarLocalOrderNumberId}/ItemsInOrder/${jVarLocalSubId}`;
+    let jVarLocalFetchUrl = `/Custom/Cleaning/Branch/Order/SubTable/ItemsInOrder/${jVarLocalOrderNumberId}/${jVarLocalSubId}/${LocalBranchName}`;
     let response = await fetch(jVarLocalFetchUrl, jVarLocalFetchHeaders);
 
     return await response;
