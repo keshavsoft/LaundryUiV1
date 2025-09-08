@@ -5,7 +5,7 @@ let StartFunc = () => {
     let jVarLocalPassword = document.getElementById('PasswordId').value;
 
     jVarLocalBodyKeysJson.UserName = jVarLocalUserName;
-    jVarLocalBodyKeysJson.Password = parseInt(jVarLocalPassword);
+    jVarLocalBodyKeysJson.Password = jVarLocalPassword;
 
     return jVarLocalBodyKeysJson;
 };

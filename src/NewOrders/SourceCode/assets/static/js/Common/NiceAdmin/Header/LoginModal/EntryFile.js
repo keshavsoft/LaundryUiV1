@@ -8,6 +8,7 @@ const StartFunc = ({ inSuccessFunc }) => {
 
     if (localCheckCookie === true) {
         ShowOnDom();
+
         return true;
     } else {
         StartFuncSetFocus();
