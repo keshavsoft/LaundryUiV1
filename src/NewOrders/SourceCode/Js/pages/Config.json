@@ -1,7 +1,7 @@
 {
-    "urls":{
-        "SaveButtonId":{
-            "redirectToUrl":"../../../Branch/BranchToday/HtmlFiles/QrRaiseAll.html"
+    "urls": {
+        "SaveButtonId": {
+            "redirectToUrl": "../../../Branch/BranchToday/HtmlFiles/QrRaiseAll.html"
         }
     },
     "routePath": "V3",
@@ -10,6 +10,8 @@
     "localStorageKeys": {
         "CustomerOrderKey": "CustomerOrders",
         "ItemNamesKey": "ItemNames",
-        "AddOnsKey": "AddOns"
+        "AddOnsKey": "AddOns",
+        "OrderKey": "PresentOrder",
+        "PresentOrderAddOnsKey": "PresentOrderAddOns"
     }
 }
